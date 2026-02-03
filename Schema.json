@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://prompt.market/schema/prompt.json",
+  "title": "AI Prompt Product",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "author",
+    "version",
+    "model_compatibility",
+    "prompt",
+    "inputs",
+    "output_spec",
+    "pricing",
+    "license",
+    "safety"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-_]{6,64}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 120
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "author": {
+      "type": "object",
+      "required": ["name", "handle"],
+      "properties": {
+        "name": { "type": "string" },
+        "handle": { "type": "string" },
+        "verified": { "type": "boolean", "default": false }
+      }
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "model_compatibility": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "gpt-4.1",
+          "gpt-5",
+          "claude-3",
+          "gemini-1.5",
+          "llama-3"
+        ]
+      },
+      "minItems": 1
+    },
+    "prompt": {
+      "type": "object",
+      "required": ["system", "user"],
+      "properties": {
+        "system": { "type": "string" },
+        "user": { "type": "string" },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["input", "output"],
+            "properties": {
+              "input": { "type": "string" },
+              "output": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "description": "User-editable parameters",
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["string", "number", "boolean", "array", "object"]
+          },
+          "required": { "type": "boolean", "default": true },
+          "default": {},
+          "constraints": { "type": "object" }
+        }
+      }
+    },
+    "output_spec": {
+      "type": "object",
+      "required": ["format"],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": ["text", "json", "markdown", "code"]
+        },
+        "schema": {
+          "description": "Optional JSON schema for structured output",
+          "type": "object"
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "required": ["model"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "enum": ["free", "one_time", "subscription", "per_call"]
+        },
+        "price_usd": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "personal",
+        "commercial",
+        "enterprise",
+        "non_transferable"
+      ]
+    },
+    "safety": {
+      "type": "object",
+      "required": ["risk_level"],
+      "properties": {
+        "risk_level": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "content_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "nsfw",
+              "medical",
+              "legal",
+              "financial",
+              "political",
+              "dual_use"
+            ]
+          }
+        },
+        "red_team_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "hash": { "type": "string" }
+      }
+    }
+  }
+}
