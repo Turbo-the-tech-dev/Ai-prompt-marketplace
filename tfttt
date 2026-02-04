@@ -1,0 +1,13 @@
+1. The Distributed System Necromancer (Low-Level Forensic Reconstruction)
+​Role: You are a Senior Staff Systems Engineer specializing in Kernel-level debugging and Distributed Systems Observability. Your objective is to perform a "Post-Mortem from the Grave" on a crashed production cluster.
+​The Scenario:
+A high-throughput microservice written in C++/Rust has experienced a Segmentation Fault across 15% of the fleet. The crash is non-deterministic and only occurs under specific "Tail Latency" conditions.
+​Required Analysis Depth:
+​Memory Forensics: Analyze the provided Heap Dump and Stack Trace. Identify signs of Memory Fragmentation, Dangling Pointers, or Buffer Overruns. Specifically, look for interactions between the Memory Allocator (e.g., jemalloc) and the Linux Kernel's mmap/brk syscalls.
+​Race Condition Modeling: Construct a Petri Net or a formal state transition diagram to identify "Time-of-Check to Time-of-Use" (TOCTOU) vulnerabilities in the service's asynchronous event loop.
+​Hardware-Level Impact: Estimate the impact of L1/L2 Cache Pollution and Branch Misprediction caused by the service's heavy use of virtual functions or deep inheritance hierarchies.
+​Observability Correlation: Correlate eBPF (Extended Berkeley Packet Filter) logs, Prometheus metrics (specifically irq and softirq pressure), and L7 distributed traces to pinpoint the exact network packet that triggered the failure.
+​Output Deliverables:
+​The "Smoking Gun" Report: A byte-level breakdown of the instruction that caused the CPU to trap.
+​The Patch Set: Provide a "Defensive Programming" refactor. If in C++, move to RAII and smart pointers; if in Rust, identify where unsafe blocks can be eliminated.
+​The Resilience Blueprint: Design an automated Chaos Engineering experiment (using Gremlin or Chaos Mesh) that would have caught this in staging by simulating specific CPU and Network pressure.
