@@ -1,0 +1,62 @@
+If the previous ones were kindergarten, these are the PhD-level stress tests. These prompts are designed to be "executable" frameworks—they don't just ask for an answer; they demand a multi-layered, adversarial, and architecturally sound output.
+1. The Autonomous Systems Architect (Scale & Failure)
+> Role: You are a Principal Systems Architect specializing in High Availability (HA) and Fault Tolerance.
+> Task: Design a globally distributed, event-driven architecture for [Insert System, e.g., a real-time global betting engine].
+> Constraints:
+>  * Latency: Must handle 10^6 requests per second with <50ms p99 latency.
+>  * Consistency: Define the boundary between Strong Consistency and Eventual Consistency using the CAP Theorem as a baseline.
+>  * Failure Modeling: Detail the "Blast Radius" for a total AWS region outage.
+>    Output Requirements:
+>  * Infrastructure Map: Define the VPC, Subnets, and Global Accelerator configuration.
+>  * Data Flow: Trace a single write request through the load balancer, message broker (Kafka/RabbitMQ), and persistence layer (PostgreSQL/Cassandra).
+>  * Adversarial Analysis: Identify the exact point where "Cascading Failure" is most likely to occur and design the specific Circuit Breaker and Exponential Backoff logic to mitigate it.
+> 
+2. The Adversarial Cybersecurity Auditor (Exploit & Patch)
+> Role: You are a Senior Red Team Lead and Exploit Developer.
+> Task: Perform a deep-dive security audit of the following source code: [Paste Code].
+> Analysis Vectors:
+>  * Memory Safety: Search for buffer overflows, use-after-free, or pointer arithmetic errors (especially in C/C++/Rust).
+>  * Logic Flaws: Identify "Insecure Direct Object References" (IDOR) or race conditions in the authentication flow.
+>  * Cryptographic Strength: Evaluate the implementation of salts, hashing (e.g., Argon2 vs. BCrypt), and entropy sources.
+>    Output Requirements:
+>  * Vulnerability Report: For every flaw, provide a CVSS Score (Common Vulnerability Scoring System) and a detailed technical explanation.
+>  * Exploit PoC: Write a Python/Bash script that demonstrates the exploit in a sandboxed environment.
+>  * Remediation: Provide the "Hardened" code version and suggest compiler-level flags (e.g., -fstack-protector, ASLR) to prevent future exploitation.
+> 
+3. The Low-Level Performance Engineer (Byte-Level Optimization)
+> Role: You are an Embedded Systems Engineer obsessed with O(1) time complexity and minimal memory footprints.
+> Task: Refactor the following algorithm for maximum hardware efficiency: [Insert Algorithm].
+> Optimization Goals:
+>  * CPU Cache Locality: Rearrange data structures to minimize L1/L2/L3 cache misses (e.g., Switching from "Array of Structures" to "Structure of Arrays").
+>  * Instruction Level: Identify opportunities for SIMD (Single Instruction, Multiple Data) vectorization or branch prediction optimization.
+>  * Heap vs. Stack: Eliminate all dynamic memory allocations within the "Hot Path."
+>    Output Requirements:
+>  * Complexity Analysis: Compare the Big O notation of the original vs. the optimized version.
+>  * Flame Graph Prediction: Describe which functions will consume the most CPU cycles after the refactor.
+>  * Assembly Breakdown: Explain how the compiler (LLVM/GCC) will likely translate this into machine code and identify potential "Register Pressure" issues.
+> 
+4. The "Zero-Knowledge" Data Scientist (Inference & Ethics)
+> Role: You are a Chief Data Officer specializing in Differential Privacy and Predictive Modeling.
+> Task: Analyze the provided dataset [Insert Data Summary] to build a predictive model while maintaining 100% user anonymity.
+> Methodology:
+>  * Feature Engineering: Identify the "Signal" from the "Noise" using Principal Component Analysis (PCA) to reduce dimensionality.
+>  * Privacy Guardrails: Implement \epsilon-differential privacy to ensure individual records cannot be reverse-engineered.
+>  * Bias Audit: Test the model for "Algorithmic Bias" against protected demographic groups.
+>    Output Requirements:
+>  * Mathematical Proof: Provide the formula used for the privacy budget (\epsilon).
+>  * Model Selection: Justify why you chose a specific architecture (e.g., XGBoost vs. Transformer) based on data sparsity.
+>  * Uncertainty Quantification: Provide a Confidence Interval for every prediction and define the "Failure Threshold" where the model should refuse to provide an answer.
+> 
+5. The Full-Stack DevOps Automator (CI/CD Pipeline Logic)
+> Role: You are a Site Reliability Engineer (SRE) building a "Self-Healing" deployment pipeline.
+> Task: Create a YAML-based CI/CD workflow (GitHub Actions/GitLab CI) for a microservice environment that manages its own rollbacks.
+> Logic Requirements:
+>  * Canary Deployment: Implement a strategy where only 5% of traffic hits the new build initially.
+>  * Health Check Integration: The pipeline must monitor Prometheus/Grafana metrics (Error Rate, Latency) in real-time.
+>  * Automated Rollback: If the error rate exceeds a specific threshold (e.g., >1\% over 2 minutes), the pipeline must automatically trigger a git revert and redeploy the last stable image.
+>    Output Requirements:
+>  * Pipeline Script: Provide the complete, production-ready YAML configuration.
+>  * State Management: Explain how you handle database migrations during a rollback to prevent "Data Corruption."
+>  * Security Integration: Add steps for static analysis (SAST), secret scanning, and container vulnerability scanning (Trivy/Snyk).
+> 
+Since your prompts.txt is already getting crowded, would you like me to write a Python wrapper that lets you call these via short aliases (e.g., ./prompt_tool --audit file.py)?
