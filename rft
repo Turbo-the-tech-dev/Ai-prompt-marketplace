@@ -1,0 +1,35 @@
+Fair enough. If those feel like "Hello World" exercises, you’re looking for prompts that actually handle the messiness of production-grade systems—prompts that don't just "answer" but execute a workflow.
+Since you're clearly comfortable with the terminal and heavy exclusion logic, here are 10 "Zero-Fluff" prompts built for high-level engineering, security auditing, and system stress-testing.
+1. The "State Machine" Code Auditor
+> "Analyze the attached code and map its implicit state machine. Identify all invalid state transitions (e.g., a 'Cancelled' order becoming 'Shipped'). Generate a Mermaid.js state diagram and provide the exact logic gate refactor needed to enforce these states at the type-system level (e.g., using Rust Enums or TypeScript Discriminated Unions)."
+> 
+2. The "Dirty Data" ETL Architect
+> "I have a raw, unstructured dataset with inconsistent date formats, null values, and duplicate entries. Write a Python script using pandas and pydantic that: 1. Implements a strict validation schema, 2. Logs 'quarantined' rows to a separate JSON file, and 3. Normalizes the valid data into a 3rd Normal Form SQL schema. Explain the computational complexity (O(n)) of the cleaning pass."
+> 
+3. The "CVE-Aware" Security Hardener
+> "Scan the following code block for vulnerabilities, specifically checking for: 1. Time-of-check to time-of-use (TOCTOU) race conditions, 2. Insecure deserialization, and 3. Side-channel timing attacks. Provide a 'Proof of Concept' exploit for each vulnerability found, followed by the patched code that uses cryptographic-grade protections."
+> 
+4. The "Infrastructure as Code" Refactor
+> "Take this monolith Terraform file and refactor it into reusable modules. Implement a Remote State locking strategy using S3/DynamoDB. Add a 'Blast Radius' analysis: explain exactly which resources will be destroyed vs. updated if the variable_set changes, and generate a pre-commit hook script to run tflint and tfsec automatically."
+> 
+5. The "Byte-Level" Optimization Review
+> "Analyze this algorithm for memory efficiency. Identify where we are hitting the heap unnecessarily and suggest where stack allocation or memory pooling would reduce GC pressure. If this is Python, suggest where __slots__ or numpy vectorization would bypass the GIL bottleneck. Show the estimated reduction in memory footprint."
+> 
+6. The "Reverse-Engineering" Logic Extractor
+> "I am providing a minified/obfuscated JavaScript snippet or a disassembled assembly block. Reconstruct the high-level business logic. Identify the core algorithm (e.g., is it a custom hashing function or a proprietary compression?) and rewrite it in clean, documented Python that produces identical output for the same input."
+> 
+7. The "Network Latency" Stress-Tester
+> "Design a distributed system simulation. Model a scenario where the database has 200ms of 'tail latency' and the cache (Redis) is down. Define the Circuit Breaker logic, the Retry Jitter strategy, and the 'Graceful Degradation' UI state. Provide the pseudo-code for the middleware that handles these failures without crashing the frontend."
+> 
+8. The "API Versioning" Migration Planner
+> "Compare API v1 and v2 (schemas provided). Create a mapping layer that allows legacy clients to remain functional while the backend transitions. Write a Zero-Downtime migration plan that includes: 1. Feature flags for traffic splitting, 2. Dual-writing to both old and new databases, and 3. The 'Point of No Return' checklist for the final cutover."
+> 
+9. The "RegEx Forensics" Specialist
+> "Construct a single, optimized Regular Expression to parse [Complex Log Format, e.g., Nginx Custom Logs]. The regex must capture nested JSON fields within the log string without catastrophic backtracking. Provide a breakdown of every capture group and a benchmark showing its performance against a 1GB log file."
+> 
+10. The "Context-Aware" Prompt Chain Builder
+> "I need to build a chain of three prompts to automate [Task]. Prompt 1 must extract entities and intent. Prompt 2 must take that JSON and query a mock vector database for RAG. Prompt 3 must synthesize the final answer while enforcing a 'System Persona' of a skeptical auditor. Define the Handover Schema between these prompts to ensure zero data loss in the chain."
+> 
+Pro-Tip for your prompts.txt:
+Since you’re using nano and presumably running these via a script, you might want a "Prompt Wrapper" that automatically injects your environment variables (like $SHELL or $PWD) into the prompt before sending it to the LLM.
+Should I write you a bash function that pipes your main.py output directly into one of these prompts for an automated "Code Review" loop?
