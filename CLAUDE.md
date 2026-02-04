@@ -4,15 +4,27 @@
 
 **Ai-prompt-marketplace** is a marketplace platform for AI prompts with strict schema validation. The system enforces structured prompt definitions including inputs, constraints, safety tags, expected outputs, versioning, and pricing tiers.
 
-**Current Status:** Pre-development / planning phase. The repository contains only the initial README with the project vision. No source code, dependencies, or infrastructure have been set up yet.
+**Current Status:** Pre-development / planning phase. The repository contains documentation only — no source code, dependencies, or infrastructure have been set up yet. The tech stack has not been selected.
+
+**Repository:** [Turbo-the-tech-dev/Ai-prompt-marketplace](https://github.com/Turbo-the-tech-dev/Ai-prompt-marketplace)
 
 ## Repository Structure
 
 ```
 Ai-prompt-marketplace/
+├── .git/              # Git version control
 ├── CLAUDE.md          # This file — AI assistant guide
 └── README.md          # Project description and vision
 ```
+
+**Notable absences** (should be created as part of initial project setup):
+- No `.gitignore` — must be added before any code or environment files are introduced
+- No dependency manifests (`package.json`, `requirements.txt`, etc.)
+- No source directories (`src/`, `app/`, `lib/`, etc.)
+- No test directories or configuration
+- No CI/CD workflows (`.github/workflows/`)
+- No Docker or deployment configuration
+- No environment variable templates (`.env.example`)
 
 As the project grows, this section should be updated to reflect the actual directory layout.
 
@@ -94,6 +106,9 @@ No build system or dependencies are configured yet. This section should be updat
 # Run tests
 # (e.g., npm test, pytest)
 
+# Lint / format
+# (e.g., npm run lint, black .)
+
 # Build for production
 # (e.g., npm run build)
 ```
@@ -108,6 +123,17 @@ The marketplace will likely require:
 - **Authentication**: User registration, login, and access control
 - **Frontend**: UI for browsing, purchasing, and managing prompts (if applicable)
 
+### Suggested Initial Setup Priorities
+
+When starting development, address these in order:
+
+1. **Add `.gitignore`** — include common patterns for the chosen language/framework plus `.env`, `node_modules/`, `__pycache__/`, IDE files, OS files
+2. **Choose and configure the tech stack** — language, framework, database, validation library
+3. **Set up project scaffolding** — directory structure, dependency manifest, basic configuration
+4. **Configure linting and formatting** — enforce code style from the start
+5. **Set up a basic CI pipeline** — run linting and tests on every push/PR
+6. **Implement the prompt schema** — this is the core domain object and everything else depends on it
+
 ## For AI Assistants
 
 When working on this codebase:
@@ -119,3 +145,5 @@ When working on this codebase:
 5. **Update this file.** When significant structural changes are made (new directories, new tech stack choices, new conventions), update CLAUDE.md to reflect the current state.
 6. **Security first.** Never introduce vulnerabilities — validate inputs, escape outputs, protect secrets.
 7. **Test your work.** Run existing tests after changes; add tests for new functionality.
+8. **Check for `.gitignore` before adding files.** Since no `.gitignore` exists yet, be careful not to commit sensitive files (`.env`, credentials, secrets) or bulky artifacts (`node_modules/`, build output).
+9. **Verify the current state.** This project is in its earliest phase. Do not assume any tooling, frameworks, or source code exist unless you have confirmed by reading the file system.
