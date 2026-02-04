@@ -1,0 +1,33 @@
+It looks like you're building a "Cardi" toolkit for prompt engineering, using a mix of shell scripting to scaffold your project and some heavy-duty file exclusion patterns for backups or syncs.
+Since you are looking for high-caliber, structured prompts that go beyond simple questions, here are 10 prompts designed for complex reasoning, technical analysis, and creative strategy.
+1. The "Modular System Architect"
+> "Decompose the following high-level system requirement into a modular microservices architecture. For each service, define: 1. Core responsibility, 2. API endpoints (REST/gRPC), 3. Data persistence strategy, and 4. Inter-service communication patterns (Sync vs. Async). Identify potential single points of failure and suggest redundancy measures."
+> 
+2. The "Reverse Prompt Engineer"
+> "Analyze the following output: [Insert Text/Code]. Your goal is to reverse-engineer the exact system prompt, constraints, and stylistic instructions that would be required to generate this specific result with 95% accuracy. Breakdown the instructions by Role, Tone, and Structural Constraints."
+> 
+3. The "Legal & Ethical Stress Tester"
+> "Review the following business proposal or feature set: [Insert Idea]. Act as a specialized auditor to identify: 1. Potential GDPR/CCPA compliance risks, 2. Unintended algorithmic biases, 3. Dark patterns in the UX, and 4. Long-term societal impact. Provide a 'Red Team' report on how this could be exploited by bad actors."
+> 
+4. The "Simulated Multi-Agent Debate"
+> "Host a debate between three experts regarding [Topic]: a Pragmatic Engineer, a Visionary Futurist, and a Skeptical CFO. Each must provide a 200-word opening statement, followed by a rebuttal to the others. Finally, act as a Moderator to synthesize a compromise that satisfies the core constraints of all three parties."
+> 
+5. The "Code Path Complexity Auditor"
+> "Analyze the following function for cyclomatic complexity. Identify every possible execution path, including edge cases like null pointers, network timeouts, and race conditions. For each path, provide a unit test case in [Language] and suggest a refactor to reduce the nesting depth and cognitive load."
+> 
+6. The "Socratic Tutor for Complex Theory"
+> "I want to learn [Complex Topic, e.g., Quantum Entanglement]. Do not explain it immediately. Instead, ask me a series of increasingly difficult questions to gauge my current understanding. After each of my answers, provide a brief correction or validation, and then ask the next question to guide me toward discovering the core principles myself."
+> 
+7. The "Contextual Translation & Localization"
+> "Translate the following technical documentation into [Target Language]. Do not perform a literal word-for-word translation. Instead, localize the metaphors, technical jargon, and tone to match the cultural and professional standards of a senior developer in [Target Country]. Provide a table of 'Key Terms' explaining why certain localized choices were made."
+> 
+8. The "First Principles Problem Solver"
+> "Break down the problem of [Problem, e.g., Reducing Cloud Costs] using First Principles Thinking. Strip away all industry assumptions and standard 'best practices.' Identify the fundamental physical or digital truths involved. Build a solution from the ground up based only on these truths, ignoring how it 'is usually done.'"
+> 
+9. The "Interactive Narrative World-Builder"
+> "Generate a detailed setting for a [Genre] story. Create a 'World Bible' entry including: 1. The Magic/Tech System (with strict limitations), 2. Socio-political hierarchy, 3. Two conflicting historical myths, and 4. A map description. Ensure the environment directly influences the character's primary conflict."
+> 
+10. The "Executive Summary & Action Pivot"
+> "Read the following long-form transcript/report: [Insert Text]. Produce a 'C-Suite Dashboard' summary: 1. Top 3 'Bottom Line' takeaways, 2. Immediate 'Stop/Start/Continue' recommendations, 3. Resource allocation shifts required, and 4. A 30-60-90 day execution roadmap."
+> 
+Would you like me to take one of these and tailor it specifically for your Cardi toolkit's main.py functionality?
