@@ -1,0 +1,36 @@
+I hear you—let’s drop the "Cardi" branding and get straight to the heavy-duty, industrial-grade logic. If you're building a "Prompt Engineering Toolkit," you need prompts that act like high-level compilers for human thought.
+Here are 10 "Heavyweight" prompts designed for deep analysis, system architecture, and aggressive debugging.
+🛠️ The Technical & Architectural Tier
+1. The "Recursive Debugger" (The Forensic Specialist)
+> "Act as a Senior Staff Engineer. I am providing a stack trace and the associated code block. 1. Identify the 'Primary' cause. 2. Identify 'Secondary' cascading failures. 3. Analyze the memory state and variable values at the moment of the crash. 4. Propose a 'Hotfix' for immediate resolution and a 'Structural Fix' to prevent this entire class of bugs through architectural changes."
+> 
+2. The "Cloud Infrastructure Optimizer"
+> "Given the following service requirements and traffic estimates: [Insert Data], design a highly available AWS/GCP architecture. For every component, provide a 'Cost-to-Performance' ratio. Include a strategy for auto-scaling triggers, multi-region failover, and data egress minimization. Flag any service that introduces more than 50ms of latency."
+> 
+3. The "Dependency Hell" Resolver
+> "Analyze this requirements.txt or package.json. Identify version conflicts, deprecated libraries with known CVEs, and 'bloat' dependencies that can be replaced with native standard library functions. Output a 'Hardened' dependency list and a migration script to handle breaking changes."
+> 
+📈 The Strategy & Logic Tier
+4. The "Second-Order Effects" Simulator
+> "Analyze the following decision: [Insert Decision]. Predict the immediate (Level 1), short-term (Level 2), and long-term (Level 3) consequences. Specifically, look for 'unintended incentives'—how could this decision encourage bad behavior from users or competitors that we didn't foresee?"
+> 
+5. The "Oppositional Logic" Red-Teamer
+> "I will provide a thesis or business strategy. Your job is to destroy it. Find the logical fallacies, the weak market assumptions, and the technical bottlenecks. Do not be polite. After the critique, provide a 'Phoenix Version' of the strategy that incorporates defenses against every weakness you identified."
+> 
+6. The "Statistical Data Interpreter"
+> "I am uploading a raw dataset (JSON/CSV). 1. Perform a 'Sanity Check' for outliers and corrupted data. 2. Identify the top 3 correlations that are statistically significant (p < 0.05). 3. Create a narrative explanation of what this data means for a non-technical stakeholder, and 4. Suggest what data is missing that would make this analysis 10x more powerful."
+> 
+✍️ The Content & Code Generation Tier
+7. The "Polyglot Code Translator"
+> "Take the following logic written in [Language A] and port it to [Language B]. Do not just translate syntax. Adapt it to the idiomatic patterns of the target language (e.g., use Pythonic list comprehensions or Rust’s ownership model). Include a side-by-side comparison of how error handling differs between the two implementations."
+> 
+8. The "Elastic Technical Writer"
+> "Convert the following raw technical notes into three distinct formats: 1. A High-Level Executive Summary (3 bullets max), 2. A Detailed Developer Documentation (with code examples and edge cases), and 3. A User-Facing 'What's New' blog post. Maintain strict factual consistency across all three."
+> 
+9. The "Black-Box API Simulator"
+> "Act as a mock server for the following API documentation: [Insert Docs]. I will send you HTTP requests (GET, POST, etc.). You will respond with valid JSON payloads, including appropriate HTTP status codes (200, 400, 404, 500) and headers. If my request is malformed, provide a detailed error message according to the spec."
+> 
+10. The "Prompt-to-Tooling" Meta-Generator
+> "I want to automate [Task]. Design a Python script that uses an LLM to accomplish this. Define the System Prompt, the JSON schema for the output, the Retry Logic for failed completions, and a Validation Function to ensure the LLM's output isn't hallucinated before it hits my database."
+> 
+Since you're working with those file exclusion patterns in your nano screenshot, would you like me to write a shell script that automatically applies these prompts to files in a directory while respecting those excludes?
