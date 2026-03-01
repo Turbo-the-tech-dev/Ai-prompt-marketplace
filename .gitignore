@@ -1,0 +1,41 @@
+# Environment variables and secrets
+.env
+.env.*
+*.env
+secrets/
+credentials/
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage and test artifacts
+.coverage
+coverage/
+.pytest_cache/
+htmlcov/
+
+# Build artifacts
+*.min.js
+*.min.css
